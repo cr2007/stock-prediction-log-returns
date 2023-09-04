@@ -7,6 +7,7 @@ import yfinance as yf
 from scipy.stats import norm
 
 st.title('Stock Price Prediction based on Log Returns')
+st.write("Instruction: Please select input ticker and date in the sidebar for computation")
 ticker = st.sidebar.text_input('Ticker')
 start_date = st.sidebar.date_input('Start Date')
 end_date = st.sidebar.date_input('End Date')
