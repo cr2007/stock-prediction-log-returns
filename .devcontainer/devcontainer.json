@@ -1,0 +1,31 @@
+{
+	"name": "Python Image",
+	"dockerFile": "Dockerfile",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				// Python Extension
+				"ms-python.python",
+				"ms-python.pylint",
+				"njpwerner.autodocstring",
+				"esbenp.prettier-vscode",
+				// Miscellaneous Extensions
+				"VisualStudioExptTeam.vscodeintellicode",
+				"VisualStudioExptTeam.intellicode-api-usage-examples",
+				"ms-vscode-remote.remote-containers",
+				"eamodio.gitlens", // GitLens
+				"mhutchie.git-graph",
+				// Markdown
+				"yzhang.markdown-all-in-one",
+				"bierner.github-markdown-preview",
+				// Icon Pack
+				"vscode-icons-team.vscode-icons",
+				"ms-vscode.sublime-keybindings", // Sublime Text Keybinding
+				"maximetinu.identical-sublime-monokai-csharp-theme-colorizer"
+			]
+		},
+		"codespaces": {
+			"openFiles": ["stock2.py"]
+		}
+	}
+}
