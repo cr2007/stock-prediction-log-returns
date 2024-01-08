@@ -8,9 +8,21 @@ from scipy.stats import norm
 
 st.title('Stock Price Prediction based on Log Returns')
 st.write("Instruction: Please select input ticker and date in the sidebar for computation")
-ticker = st.sidebar.text_input('Ticker')
-start_date = st.sidebar.date_input('Start Date')
-end_date = st.sidebar.date_input('End Date')
+
+# Create three columns in the Streamlit app
+col1, col2, col3 = st.columns(3)
+
+# Input field to enter a stock ticker
+with col1:
+    ticker = st.text_input('Ticker')
+
+# Date input field to select a start date
+with col2:
+    start_date = st.date_input('Start Date')
+
+# Date input field to select an end date
+with col3:
+    end_date = st.date_input('End Date')
 
 df = yf.download(ticker,start=start_date, end=end_date)
 df.reset_index()
