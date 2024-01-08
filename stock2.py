@@ -14,15 +14,15 @@ col1, col2, col3 = st.columns(3)
 
 # Input field to enter a stock ticker
 with col1:
-    ticker = st.text_input('Ticker')
+    ticker = st.text_input('Ticker', placeholder='Eg. AAPL', help="Enter a stock ticker (i.e. AAPL)")
 
 # Date input field to select a start date
 with col2:
-    start_date = st.date_input('Start Date')
+    start_date = st.date_input('Start Date', help="Select a start date")
 
 # Date input field to select an end date
 with col3:
-    end_date = st.date_input('End Date')
+    end_date = st.date_input('End Date', help="Select an end date")
 
 df = yf.download(ticker,start=start_date, end=end_date)
 df.reset_index()
