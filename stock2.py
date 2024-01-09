@@ -65,43 +65,56 @@ st.write('Blue curve represents the shape of data distribution an the red curve 
 #probability of 5% drop in stock price in one day
 st.subheader('Probability of % drop in stock price in one day')
 st.write('Probability of 5% drop in stock price in one day')
+
 prob_drop5_day = norm.cdf(-0.05, loc=mu, scale=sigma)
-value1 = print('the probability of 5% drop in stock price in one day'+ str(prob_drop5_day))
+value1 = print(f"The probability of 5% drop in stock price in one day: {str(prob_drop5_day)}")
+
 st.write(prob_drop5_day)
 
 #probability of 10% drop in stock price in one day
 st.write('Probability of 10% drop in stock price in one day')
+
 prob_drop10_day = norm.cdf(-0.10, loc=mu, scale=sigma)
-print('the probability of 10% drop in stock price in one day'+ str(prob_drop10_day))
+
+print(f"The probability of 10% drop in stock price in one day: {str(prob_drop10_day)}")
 st.write(prob_drop10_day)
 
 #probability of 50% drop in stock price in one day
 st.write('Probability of 50% drop in stock price in one day')
+
 prob_drop50_day = norm.cdf(-0.5, loc=mu, scale=sigma)
-value1 = print('the probability of 50% drop in stock price in one day'+ str(prob_drop50_day))
+value1 = print(f"The probability of 50% drop in stock price in one day: {str(prob_drop50_day)}")
+
 st.write(prob_drop50_day)
+
+# -----------------------------------------------------------------------------
 
 #for yearly stock price drops
 mu_yearly = mu * 250
 sigma_yearly = sigma * np.sqrt(250)
+
 #for 50% drop
 st.subheader('Probability of % drop in stock price in one year')
+
+
 st.write('Probability of 5% drop in stock price in one day')
+
 prob_drop5_year = norm.cdf(-0.05, mu_yearly, sigma_yearly)
-print('the probability of 5% drop in stock price in one year'+ str(prob_drop5_year))
+
+print(f"The probability of 5% drop in stock price in one year: {str(prob_drop5_year)}")
 st.write(prob_drop5_year)
 
-st.write('Probability of 25% drop in stock price in one day')
-prob_drop25_year = norm.cdf(-0.25, mu_yearly, sigma_yearly)
-print('the probability of 25% drop in stock price in one year'+ str(prob_drop25_year))
-st.write(prob_drop25_year)
 
+st.write('Probability of 25% drop in stock price in one day')
+
+prob_drop25_year = norm.cdf(-0.25, mu_yearly, sigma_yearly)
+
+print(f"The probability of 25% drop in stock price in one year: {str(prob_drop25_year)}")
+st.write(prob_drop25_year)
 
 
 st.write('Probability of 50% drop in stock price in one day')
 prob_drop50_year = norm.cdf(-0.50, mu_yearly, sigma_yearly)
-print('the probability of 50% drop in stock price in one year'+ str(prob_drop50_year))
+
+print(f"The probability of 50% drop in stock price in one year: {str(prob_drop50_year)}")
 st.write(prob_drop50_year)
-
-
-
