@@ -1,9 +1,9 @@
-import streamlit as st 
+import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns 
-import yfinance as yf 
+import seaborn as sns
+import yfinance as yf
 from scipy.stats import norm
 
 st.title('Stock Price Prediction based on Log Returns')
